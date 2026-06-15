@@ -673,6 +673,13 @@ canvas{display:block;width:100%!important}
 
   /* Larger charts */
   .chart-tall{height:200px!important}
+  /* === Arreglo vista en computador: el grid va en #main, no en #app === */
+  #app{display:block !important}
+  #main{display:grid !important; grid-template-columns:240px 1fr; grid-template-rows:auto 1fr; grid-template-areas:"side filter" "side content"; width:100vw; height:100dvh; overflow:hidden}
+  #topnav{display:none !important}
+  #tabbar{grid-area:side; align-self:stretch}
+  #year-filter{grid-area:filter}
+  #pages{grid-area:content; height:auto; min-height:0}
 }
 
 @media(min-width:900px){
